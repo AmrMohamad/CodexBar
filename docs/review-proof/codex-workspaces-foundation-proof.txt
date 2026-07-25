@@ -1,0 +1,48 @@
+Codex Workspaces foundation — redacted behavior proof
+Captured: 2026-07-26
+Git SHA: 5c571d71ed6c557a217b7c457cb15f605f13d9b4
+Base SHA: cc8da27cec92029a6435bfee4a703a719290234e
+
+PRIVACY AND ISOLATION
+  Source: 3 real local Codex session files in an isolated CODEX_HOME
+  Preferences: isolated CFFIXED_USER_HOME
+  Cache: task-specific empty root, then a copied v10 artifact
+  Network: denied by the outer macOS sandbox policy
+  Published data: aggregate counts and hashes only
+
+DETERMINISTIC REGRESSION PROOF
+  Exact base: 37 Spend Dashboard tests, 13 issues
+  Pre-fix feature head: same 37 tests, same 13 issues
+  Repaired foundation: 37 tests, 0 issues
+
+REAL COLD AND WARM INDEX
+  cold: status=complete projects=2 sessions=3 indexed=3 skipped=0 duration_ms=1615
+  phases: scanning -> indexing 0/3 -> indexing 1/3 -> indexing 3/3 -> saving
+  warm: scope_match=true totals_match=true indexed=3 skipped=0 duration_ms=68
+  warm phases: scanning only (v11 cursor reused; no reindex/save)
+
+UPGRADE AND PERSISTENCE
+  cache_empty_before_v10_seed=true
+  v10_checksum_unchanged=true
+  v11_created=true
+  sidecar_created=true
+  sidecar_user_version=5
+  payload_format=3
+  tables=catalog_threads,index_state,schema_meta,snapshot_payloads,usage_daily,usage_events,usage_rollouts
+  rows: catalog_threads=2801 index_state=1 schema_meta=0 snapshot_payloads=1
+  rows: usage_daily=7 usage_events=737 usage_rollouts=3
+
+LAST-GOOD RETENTION
+  missing_catalog: status=catalogMissing totals_retained=true projects_retained=true
+  corrupt_catalog: status=catalogCorrupt totals_retained=true projects_retained=true
+
+EXACT-SHA AUTOMATED GATES
+  Spend Dashboard focused: 37 tests / 4 suites passed
+  Foundation focused: 173 tests / 8 suites passed
+  make test: 727 selections / 61 groups passed; 0 failures; 0 retries; 0 timeouts
+  make check: 0 SwiftFormat changes; 0 SwiftLint violations
+  git diff --check: passed
+
+REDACTION REVIEW
+  No raw paths, titles, session IDs, database rows, token counts, costs, identities,
+  API keys, auth headers, hostnames, or IP addresses are present in this artifact.
