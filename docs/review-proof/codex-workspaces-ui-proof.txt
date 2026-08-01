@@ -1,0 +1,66 @@
+Codex Workspaces UI proof
+=========================
+
+Source
+------
+head_sha=fc9115f62fd2b08f36589d1d6f7abaffd2cc8b10
+base_sha=78523f4ad890893851219c5f5d41139a60a3139a
+commit_count_over_base=1
+bundle=<WORKTREE>/CodexBar.app
+bundle_identity=com.steipete.codexbar.debug
+
+Isolation
+---------
+HOME=<ISOLATED_HOME>
+CFFIXED_USER_HOME=<ISOLATED_HOME>
+CODEX_HOME=<ISOLATED_CODEX_HOME>
+network_policy=deny_all
+provider_status_checks=disabled
+keychain_access=disabled
+refresh_frequency=manual
+fixture_kind=synthetic_local_rollout_logs
+
+Validation
+----------
+make_test=767/767 selections; 64/64 groups; 0 failures; 0 retries; 0 timeouts
+make_check=passed; 0 SwiftFormat changes; 0 SwiftLint violations
+git_diff_check=passed
+xcode_build=passed; SwiftPM workspace; CodexBar scheme; macOS Debug
+package=passed; ad-hoc signed debug bundle
+
+Runtime menu path
+-----------------
+status_item_identifier=CodexBar.StatusItem.codex
+menu_provider=Codex
+workspaces_row=present
+workspaces_submenu=present
+open_in_window_action=present
+inspector_window=opened
+inspector_title=Codex Workspaces
+tabs_verified=Overview,Sessions,Models
+workspace_count=2
+session_count=3
+model_count=3
+
+Persistence metadata
+--------------------
+sidecar_user_version=5
+sidecar_tables=catalog_threads,index_state,schema_meta,snapshot_payloads,usage_daily,usage_events,usage_rollouts
+catalog_threads=0
+snapshot_payloads=1
+usage_rollouts=3
+usage_events=4
+usage_daily=3
+
+Published captures
+------------------
+codex-workspaces-window.png=Overview
+codex-workspaces-sessions.png=Sessions
+codex-workspaces-models.png=Models
+
+Privacy review
+--------------
+Only app-window captures are eligible for publication.
+The visible workspace names, paths, session labels, model names, and usage values are deterministic synthetic fixtures.
+The captures contain no real identity, home path, email, API/auth token, session UUID, hostname, IP address, or private chat title.
+Desktop inspection captures are excluded from publication.
